@@ -1,0 +1,91 @@
+html,body,div,ul,form,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.box {
+    border: 1px solid #CCC;
+    height: 500px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.box h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.message-list {
+    width: 70%;
+    float: left;
+
+}
+.message-list dl {
+    margin-bottom: 20px;
+}
+.message-list dt {
+    padding: 5px;
+    background-color: #eee;
+}
+.message-list dd {
+    padding: 10px;
+}
+.message-list time {
+    color: #999;
+}
+.user-list {
+    width: 20%;
+    float: right;
+}
+.user-list li {
+    cursor: pointer;
+    padding: 5px;
+}
+.user-list li:hover {
+    background-color: #eee;
+}
+.send-box {
+    height: 80px;
+}
+.send-box textarea {
+    height: 92%;
+    width: 85%;
+}
+#btn-send {
+    height: 100%;
+    width: 13%;
+    border: 1px solid #ccc;
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 8888;
+    opacity: .5;
+}
+.login {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #999;
+    left: 150px;
+    top: 100px;
+    z-index: 9999;
+}

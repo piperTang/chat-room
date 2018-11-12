@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淡定集团</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <!-- 消息列表 -->
+        <div class="message-list box">
+            <h3>消息列表</h3>
+            <dl v-for="(v,k) in messageList" :key="k">
+                <dt><strong>{{v.username}}</strong> 在 <time>{{ v.datetime }}</time> 说：</dt>
+                <dd>{{ v.content }}</dd>
+            </dl>
+        </div>
+        <!-- 用户列表 -->
+        <div class="user-list box">
+            <h3>用户列表 <a @click="logout" href="#">退出</a></h3>
+            <ul>
+                <li  v-for="(v,k) in userList">{{ v.username }}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 发送消息框 -->
+    <div class="container send-box">
+        <textarea v-model="message"></textarea>
+        <input @click="send" id="btn-send" type="button" value="发送">
+    </div>
+    <!-- 登录表单 -->
+    <div :class="{'login':true,'hide':layerHide}">
+        <div><input v-model="username" type="text" placeholder="输入用户名"></div>
+        <div><input @click="dologin" type="button" value="登录"></div>
+    </div>
+    <!-- 登录时黑色背景层 -->
+    <div :class="{'layer':true,'hide':layerHide}"></div>
+</div>
+
+<script src="vue.min.js"></script>
+<script src="room.js"></script>
+</body>
+</html>

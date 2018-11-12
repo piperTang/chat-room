@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淡定集团</title>
+    <style>
+        li{
+            padding: 5px;
+            list-style-type: none;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h3>房间列表</h3>
+        <ul>
+            <li v-for="(v,k) in rooms">
+                <p><a :href=" 'room.html?id=' + v.id ">{{v.title}}</a></p>
+                <p>主播：{{v.username}}</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="vue.min.js"></script>
+<script>
+    new Vue({
+        el :'#app',
+        data:{
+            rooms:[
+                {
+                    id:1,
+                    title:'世界杯',
+                    username:'大灰狼'
+                },
+                {
+                    id:2,
+                    title:'PHP',
+                    username:'淡定'
+                }
+            ]
+        },
+    })
+</script>
